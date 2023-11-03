@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      function createBlank() {
+        win = window.open();
+        win.document.body.style.margin = "0";
+        win.document.body.style.height = "100vh";
+        var iframe = win.document.createElement("iframe");
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        iframe.style.margin = "0";
+        iframe.referrerpolicy = "no-referrer";
+        iframe.allow = "fullscreen";
+        iframe.src = location.origin;
+        win.document.body.appendChild(iframe);
+        window.location.href = "https://google.com"
+      }
+      createBlank();
+    </script>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        text-align: center;
+        align-content: center;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>
