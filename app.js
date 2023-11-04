@@ -11,11 +11,7 @@ app.get('/:page', (req, res) => {
   res.sendFile(path.join(__dirname, `public/${page}.html`));
 });
 
-// 404 Error Handler
-app.use((req, res) => {
-    res.status(404).redirect('./public/404.html'); // Redirect to the desired page
-  });
-  
+
 
 const port = 3000; // Change this to your desired port number
 app.listen(port, () => {
